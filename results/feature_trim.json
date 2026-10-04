@@ -1,0 +1,36 @@
+{
+  "tuning_f1": {
+    "6": 0.6609,
+    "10": 0.6757,
+    "15": 0.6816,
+    "20": 0.6869,
+    "28": 0.686
+  },
+  "chosen": 20,
+  "holdout": {
+    "28": 0.7016,
+    "20": 0.7001
+  },
+  "kept_features": [
+    "now_ifr",
+    "spread",
+    "relh",
+    "wind_sin",
+    "vsby",
+    "ceiling",
+    "ceiling_min_6h",
+    "hour_of_day",
+    "wx_RA",
+    "tmpf",
+    "pressure_chg_3h",
+    "pressure_chg_6h",
+    "spread_chg_3h",
+    "temp_chg_3h",
+    "wind_cos",
+    "dwpf",
+    "month",
+    "vsby_min_6h",
+    "mslp",
+    "wx_FG"
+  ]
+}
