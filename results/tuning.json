@@ -1,0 +1,123 @@
+{
+  "grid": [
+    {
+      "params": {
+        "max_depth": 3,
+        "learning_rate": 0.03,
+        "n_estimators": 200
+      },
+      "tuning_f1": 0.6922
+    },
+    {
+      "params": {
+        "max_depth": 3,
+        "learning_rate": 0.03,
+        "n_estimators": 400
+      },
+      "tuning_f1": 0.691
+    },
+    {
+      "params": {
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "n_estimators": 200
+      },
+      "tuning_f1": 0.6815
+    },
+    {
+      "params": {
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "n_estimators": 400
+      },
+      "tuning_f1": 0.6747
+    },
+    {
+      "params": {
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "n_estimators": 200
+      },
+      "tuning_f1": 0.6964
+    },
+    {
+      "params": {
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "n_estimators": 400
+      },
+      "tuning_f1": 0.6885
+    },
+    {
+      "params": {
+        "max_depth": 4,
+        "learning_rate": 0.1,
+        "n_estimators": 200
+      },
+      "tuning_f1": 0.6832
+    },
+    {
+      "params": {
+        "max_depth": 4,
+        "learning_rate": 0.1,
+        "n_estimators": 400
+      },
+      "tuning_f1": 0.6681
+    },
+    {
+      "params": {
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "n_estimators": 200
+      },
+      "tuning_f1": 0.6772
+    },
+    {
+      "params": {
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "n_estimators": 400
+      },
+      "tuning_f1": 0.6801
+    },
+    {
+      "params": {
+        "max_depth": 6,
+        "learning_rate": 0.1,
+        "n_estimators": 200
+      },
+      "tuning_f1": 0.6669
+    },
+    {
+      "params": {
+        "max_depth": 6,
+        "learning_rate": 0.1,
+        "n_estimators": 400
+      },
+      "tuning_f1": 0.6668
+    }
+  ],
+  "best_params": {
+    "max_depth": 4,
+    "learning_rate": 0.03,
+    "n_estimators": 200
+  },
+  "holdout": {
+    "default": {
+      "params": {
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "n_estimators": 300
+      },
+      "avg_f1": 0.7012
+    },
+    "tuned": {
+      "params": {
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "n_estimators": 200
+      },
+      "avg_f1": 0.6991
+    }
+  }
+}
