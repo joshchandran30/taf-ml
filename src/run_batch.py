@@ -5,7 +5,7 @@ import subprocess
 import pandas as pd
 import matplotlib.pyplot as plt
 
-STATIONS = ["ATL", "ORD"]
+STATIONS = ["ATL", "ORD", "SEA", "BOS", "DFW", "LAX"]
 HORIZONS = [1, 2, 3, 4, 5, 6]
 
 # Run the pipeline for every station and horizon that isn't done yet
