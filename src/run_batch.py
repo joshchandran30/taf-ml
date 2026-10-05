@@ -5,7 +5,7 @@ import subprocess
 import pandas as pd
 import matplotlib.pyplot as plt
 
-STATIONS = ["ATL"]
+STATIONS = ["ATL", "ORD"]
 HORIZONS = [1, 2, 3, 4, 5, 6]
 
 # Run the pipeline for every station and horizon that isn't done yet
@@ -18,6 +18,16 @@ for station in STATIONS:
         print("=== " + station + " horizon " + str(horizon) + " ===")
         subprocess.run([sys.executable, "src/build_dataset.py", station, str(horizon)])
         subprocess.run([sys.executable, "src/run_cv.py", station, str(horizon)])
+
+# TAF comparison for every station
+for station in STATIONS:
+    taf_result = "results/taf_horizons_" + station + ".json"
+    if os.path.exists(taf_result):
+        print("Skipping TAF comparison for " + station + " (already done)")
+        continue
+    print("=== TAF comparison for " + station + " ===")
+    subprocess.run([sys.executable, "src/download_taf.py", station])
+    subprocess.run([sys.executable, "src/taf_horizons.py", station])
 
 # Collect all results into one table
 rows = []

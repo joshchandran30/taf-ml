@@ -1,5 +1,6 @@
 import os
 import json
+import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -8,6 +9,8 @@ from xgboost import XGBClassifier
 from taf_tools import RANK, load_tafs, forecasts_at
 
 STATION = "ATL"
+if len(sys.argv) > 1:
+    STATION = sys.argv[1]
 HORIZONS = [1, 2, 3, 4, 5, 6]
 YEARS = [2021, 2022, 2023, 2024, 2025]
 TAF_COLS = ["taf_base_rank", "taf_tempo_rank", "taf_all_rank"]
