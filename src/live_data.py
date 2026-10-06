@@ -77,7 +77,7 @@ def convert_observation(ob):
     if altim is None:
         row["alti"] = np.nan
     else:
-        row["alti"] = altim / 33.8639
+        row["alti"] = round(altim / 33.8639, 2)
 
     slp = ob.get("slp")
     if slp is None:
@@ -130,12 +130,8 @@ def fetch_live_observations(station, hours):
     df = df.dropna(subset=["vsby"])
     return df.reset_index(drop=True)
 
-def build_live_features(station, hours, max_age_hours=3):
-    # Returns (one-row table of the 28 features, "ok") or (None, reason)
-    obs = fetch_live_observations(station, hours)
-    if len(obs) == 0:
-        return None, "No observations returned"
-
+def features_from_observations(obs):
+    # Observations (from either source) -> table of features for every hour
     labeled = label_observations(obs)
     labeled["hour"] = labeled["valid"].dt.floor("h")
     labeled = labeled.drop_duplicates(subset="hour", keep="last")
@@ -145,12 +141,20 @@ def build_live_features(station, hours, max_age_hours=3):
     hourly = labeled.reindex(full_range)
     hourly["now_ifr"] = hourly["category"].apply(is_ifr).astype(float)
     hourly.loc[hourly["category"].isnull(), "now_ifr"] = np.nan
+    return compute_features(hourly)
+
+def build_live_features(station, hours, max_age_hours=3):
+    # Returns (one-row table of the 28 features, "ok") or (None, reason)
+    obs = fetch_live_observations(station, hours)
+    if len(obs) == 0:
+        return None, "No observations returned"
+
+    features = features_from_observations(obs)
 
     now = pd.Timestamp.now(tz="UTC").tz_localize(None)
-    if now - hourly.index[-1] > pd.Timedelta(hours=max_age_hours):
+    if now - features.index[-1] > pd.Timedelta(hours=max_age_hours):
         return None, "Latest observation is more than " + str(max_age_hours) + " hours old"
 
-    features = compute_features(hourly)
     latest = features.iloc[[-1]][FEATURE_COLS]
     if latest.isnull().any(axis=1).iloc[0]:
         return None, "Not enough consecutive hourly observations to compute features"
