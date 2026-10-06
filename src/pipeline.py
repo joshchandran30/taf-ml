@@ -116,10 +116,10 @@ def has_code(value, code):
         return 1
     return 0
 
-def add_features(df):
-    # Rebuild the full hourly timeline so "3 rows back" always means 3 hours
-    full_range = pd.date_range(df.index.min(), df.index.max(), freq="h")
-    df = df.reindex(full_range)
+def compute_features(df):
+    # df must have a gap-free hourly index, the columns made by
+    # label_observations, and a now_ifr column
+    df = df.copy()
 
     df["gust"] = df["gust"].fillna(0)
     df["spread"] = df["tmpf"] - df["dwpf"]
@@ -142,6 +142,13 @@ def add_features(df):
 
     df["hour_of_day"] = df.index.hour
     df["month"] = df.index.month
+    return df
+
+def add_features(df):
+    # Rebuild the full hourly timeline so "3 rows back" always means 3 hours
+    full_range = pd.date_range(df.index.min(), df.index.max(), freq="h")
+    df = df.reindex(full_range)
+    df = compute_features(df)
 
     out = df[FEATURE_COLS + ["future_ifr"]].dropna().copy()
     out["future_ifr"] = out["future_ifr"].astype(int)
