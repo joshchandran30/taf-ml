@@ -81,3 +81,32 @@ for horizon in [1, 2, 3, 4, 5, 6]:
     agree = (flags_iem == flags_awc).mean()
     print(horizon, "|", round(diff.mean(), 4), "|", round(diff.max(), 3), "|",
           round(agree, 4), "|", flags_iem.sum(), "|", flags_awc.sum())
+
+# Diagnostic: hours where the ceiling differs a lot between sources
+print("")
+print("Hours where ceiling differs by more than 1000 ft:")
+ceiling_diff = (iem_f["ceiling"] - awc_f["ceiling"]).abs()
+bad_hours = ceiling_diff[ceiling_diff > 1000].index
+print("Count:", len(bad_hours))
+
+sky_cols = ["skyc1", "skyl1", "skyc2", "skyl2", "skyc3", "skyl3", "vsby"]
+for hour in bad_hours[:6]:
+    print("")
+    print("Hour:", hour, "| IEM ceiling:", iem_f.loc[hour, "ceiling"],
+          "| AWC ceiling:", awc_f.loc[hour, "ceiling"])
+    iem_rows = iem_obs[iem_obs["valid"].dt.floor("h") == hour]
+    awc_rows = awc_obs[awc_obs["valid"].dt.floor("h") == hour]
+    print("IEM reports:")
+    print(iem_rows[["valid"] + sky_cols].to_string())
+    print("AWC reports:")
+    print(awc_rows[["valid", "raw"] + sky_cols].to_string())
+
+from pipeline import get_ceiling
+
+if len(bad_hours) > 0:
+    first_hour = bad_hours[0]
+    iem_rows = iem_obs[iem_obs["valid"].dt.floor("h") == first_hour]
+    sample = iem_rows.iloc[-1]
+    print("")
+    print("IEM sky cover repr:", repr(sample["skyc1"]), "| height repr:", repr(sample["skyl1"]))
+    print("get_ceiling on that row:", get_ceiling(sample))

@@ -1,7 +1,7 @@
 {
   "station": "LAX",
   "horizon": 2,
-  "threshold": 0.35,
+  "threshold": 0.3,
   "features": [
     "tmpf",
     "dwpf",
@@ -32,7 +32,7 @@
     "month",
     "now_ifr"
   ],
-  "val_f1_2024": 0.7468,
-  "test_f1_2025": 0.6881,
+  "val_f1_2024": 0.7508,
+  "test_f1_2025": 0.6854,
   "persistence_f1_2025": 0.6577
 }

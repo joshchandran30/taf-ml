@@ -1,7 +1,7 @@
 {
   "station": "SEA",
   "horizon": 1,
-  "threshold": 0.45,
+  "threshold": 0.35,
   "features": [
     "tmpf",
     "dwpf",
@@ -32,7 +32,7 @@
     "month",
     "now_ifr"
   ],
-  "val_f1_2024": 0.7056,
-  "test_f1_2025": 0.7558,
+  "val_f1_2024": 0.7094,
+  "test_f1_2025": 0.7608,
   "persistence_f1_2025": 0.7584
 }

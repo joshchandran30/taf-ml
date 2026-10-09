@@ -47,6 +47,16 @@ def relative_humidity(temp_c, dewp_c):
     sat_dew = np.exp(17.625 * dewp_c / (243.04 + dewp_c))
     return 100.0 * sat_dew / sat_temp
 
+def vertical_visibility_feet(raw):
+    # In a METAR, "VV001" means vertical visibility of 100 feet
+    if raw is None or " VV" not in raw:
+        return np.nan
+    position = raw.index(" VV") + 3
+    digits = raw[position:position + 3]
+    if digits.isdigit():
+        return float(digits) * 100.0
+    return np.nan
+
 def convert_observation(ob):
     # Turn one AWC report into one row in the same format as the training data
     row = {}
@@ -102,8 +112,7 @@ def convert_observation(ob):
                 base = np.nan
             if cover == "OVX":
                 cover = "VV"
-                if ob.get("vertVis") is not None:
-                    base = float(ob.get("vertVis"))
+                base = vertical_visibility_feet(row["raw"])
             elif cover == "CLR" or cover == "CAVOK":
                 cover = "CLR"
                 base = np.nan

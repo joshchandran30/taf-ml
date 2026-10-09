@@ -13,7 +13,10 @@ def parse_list(value):
 def category_from(vis, covers, heights):
     ceiling = 99999
     for i in range(len(covers)):
-        if covers[i] in ["BKN", "OVC", "VV"] and i < len(heights):
+        cover = covers[i]
+        if isinstance(cover, str):
+            cover = cover.strip()
+        if cover in ["BKN", "OVC", "VV"] and i < len(heights):
             if heights[i] is not None and heights[i] < ceiling:
                 ceiling = heights[i]
     if pd.isnull(vis):

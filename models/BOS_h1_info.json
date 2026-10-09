@@ -1,7 +1,7 @@
 {
   "station": "BOS",
   "horizon": 1,
-  "threshold": 0.4,
+  "threshold": 0.45,
   "features": [
     "tmpf",
     "dwpf",
@@ -32,7 +32,7 @@
     "month",
     "now_ifr"
   ],
-  "val_f1_2024": 0.7959,
-  "test_f1_2025": 0.8291,
+  "val_f1_2024": 0.797,
+  "test_f1_2025": 0.8247,
   "persistence_f1_2025": 0.8121
 }

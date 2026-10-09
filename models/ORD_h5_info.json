@@ -1,7 +1,7 @@
 {
   "station": "ORD",
   "horizon": 5,
-  "threshold": 0.35,
+  "threshold": 0.3,
   "features": [
     "tmpf",
     "dwpf",
@@ -32,7 +32,7 @@
     "month",
     "now_ifr"
   ],
-  "val_f1_2024": 0.6093,
-  "test_f1_2025": 0.4459,
+  "val_f1_2024": 0.6113,
+  "test_f1_2025": 0.4689,
   "persistence_f1_2025": 0.4385
 }

@@ -63,6 +63,8 @@ def get_ceiling(row):
     for i in range(1, 5):
         cover = row["skyc" + str(i)]
         height = row["skyl" + str(i)]
+        if isinstance(cover, str):
+            cover = cover.strip()
         if cover in ["BKN", "OVC", "VV"] and pd.notnull(height):
             if height < lowest:
                 lowest = height

@@ -17,18 +17,18 @@ ATL,TAF + TEMPO,3,0.678
 ATL,TAF + TEMPO,4,0.6659
 ATL,TAF + TEMPO,5,0.6622
 ATL,TAF + TEMPO,6,0.6614
-ATL,Local XGBoost,1,0.8055
-ATL,Local XGBoost,2,0.7358
-ATL,Local XGBoost,3,0.6944
-ATL,Local XGBoost,4,0.6589
-ATL,Local XGBoost,5,0.6218
-ATL,Local XGBoost,6,0.6047
-ATL,Hybrid XGBoost,1,0.8119
-ATL,Hybrid XGBoost,2,0.7439
-ATL,Hybrid XGBoost,3,0.7064
-ATL,Hybrid XGBoost,4,0.6846
-ATL,Hybrid XGBoost,5,0.6713
-ATL,Hybrid XGBoost,6,0.6647
+ATL,Local XGBoost,1,0.8065
+ATL,Local XGBoost,2,0.7352
+ATL,Local XGBoost,3,0.6898
+ATL,Local XGBoost,4,0.6595
+ATL,Local XGBoost,5,0.6283
+ATL,Local XGBoost,6,0.6023
+ATL,Hybrid XGBoost,1,0.8151
+ATL,Hybrid XGBoost,2,0.7431
+ATL,Hybrid XGBoost,3,0.7014
+ATL,Hybrid XGBoost,4,0.6881
+ATL,Hybrid XGBoost,5,0.674
+ATL,Hybrid XGBoost,6,0.6666
 ORD,Persistence,1,0.7923
 ORD,Persistence,2,0.6785
 ORD,Persistence,3,0.5948
@@ -47,18 +47,18 @@ ORD,TAF + TEMPO,3,0.6395
 ORD,TAF + TEMPO,4,0.6345
 ORD,TAF + TEMPO,5,0.634
 ORD,TAF + TEMPO,6,0.6304
-ORD,Local XGBoost,1,0.78
-ORD,Local XGBoost,2,0.6639
-ORD,Local XGBoost,3,0.5895
-ORD,Local XGBoost,4,0.5444
-ORD,Local XGBoost,5,0.5032
-ORD,Local XGBoost,6,0.4728
-ORD,Hybrid XGBoost,1,0.7861
-ORD,Hybrid XGBoost,2,0.697
-ORD,Hybrid XGBoost,3,0.6568
-ORD,Hybrid XGBoost,4,0.6265
-ORD,Hybrid XGBoost,5,0.6353
-ORD,Hybrid XGBoost,6,0.632
+ORD,Local XGBoost,1,0.7816
+ORD,Local XGBoost,2,0.6556
+ORD,Local XGBoost,3,0.5935
+ORD,Local XGBoost,4,0.5455
+ORD,Local XGBoost,5,0.5021
+ORD,Local XGBoost,6,0.4711
+ORD,Hybrid XGBoost,1,0.7836
+ORD,Hybrid XGBoost,2,0.6956
+ORD,Hybrid XGBoost,3,0.6529
+ORD,Hybrid XGBoost,4,0.6377
+ORD,Hybrid XGBoost,5,0.6347
+ORD,Hybrid XGBoost,6,0.6338
 SEA,Persistence,1,0.7102
 SEA,Persistence,2,0.5807
 SEA,Persistence,3,0.4976
@@ -77,18 +77,18 @@ SEA,TAF + TEMPO,3,0.4712
 SEA,TAF + TEMPO,4,0.4284
 SEA,TAF + TEMPO,5,0.403
 SEA,TAF + TEMPO,6,0.3872
-SEA,Local XGBoost,1,0.7089
-SEA,Local XGBoost,2,0.594
-SEA,Local XGBoost,3,0.528
-SEA,Local XGBoost,4,0.4778
-SEA,Local XGBoost,5,0.4482
-SEA,Local XGBoost,6,0.4206
-SEA,Hybrid XGBoost,1,0.7116
-SEA,Hybrid XGBoost,2,0.6023
-SEA,Hybrid XGBoost,3,0.5351
-SEA,Hybrid XGBoost,4,0.4937
-SEA,Hybrid XGBoost,5,0.462
-SEA,Hybrid XGBoost,6,0.4356
+SEA,Local XGBoost,1,0.7132
+SEA,Local XGBoost,2,0.5881
+SEA,Local XGBoost,3,0.5256
+SEA,Local XGBoost,4,0.48
+SEA,Local XGBoost,5,0.4549
+SEA,Local XGBoost,6,0.4313
+SEA,Hybrid XGBoost,1,0.7114
+SEA,Hybrid XGBoost,2,0.601
+SEA,Hybrid XGBoost,3,0.5368
+SEA,Hybrid XGBoost,4,0.493
+SEA,Hybrid XGBoost,5,0.455
+SEA,Hybrid XGBoost,6,0.4295
 BOS,Persistence,1,0.8094
 BOS,Persistence,2,0.7204
 BOS,Persistence,3,0.6562
@@ -107,18 +107,18 @@ BOS,TAF + TEMPO,3,0.6802
 BOS,TAF + TEMPO,4,0.6692
 BOS,TAF + TEMPO,5,0.661
 BOS,TAF + TEMPO,6,0.6531
-BOS,Local XGBoost,1,0.8096
-BOS,Local XGBoost,2,0.7317
-BOS,Local XGBoost,3,0.6798
-BOS,Local XGBoost,4,0.6402
-BOS,Local XGBoost,5,0.6083
-BOS,Local XGBoost,6,0.5816
-BOS,Hybrid XGBoost,1,0.8102
-BOS,Hybrid XGBoost,2,0.7435
-BOS,Hybrid XGBoost,3,0.7011
-BOS,Hybrid XGBoost,4,0.6845
-BOS,Hybrid XGBoost,5,0.6623
-BOS,Hybrid XGBoost,6,0.653
+BOS,Local XGBoost,1,0.8108
+BOS,Local XGBoost,2,0.7304
+BOS,Local XGBoost,3,0.6823
+BOS,Local XGBoost,4,0.6453
+BOS,Local XGBoost,5,0.613
+BOS,Local XGBoost,6,0.5849
+BOS,Hybrid XGBoost,1,0.8113
+BOS,Hybrid XGBoost,2,0.7407
+BOS,Hybrid XGBoost,3,0.6978
+BOS,Hybrid XGBoost,4,0.688
+BOS,Hybrid XGBoost,5,0.6647
+BOS,Hybrid XGBoost,6,0.6431
 DFW,Persistence,1,0.7658
 DFW,Persistence,2,0.6577
 DFW,Persistence,3,0.5931
@@ -137,45 +137,45 @@ DFW,TAF + TEMPO,3,0.6249
 DFW,TAF + TEMPO,4,0.6002
 DFW,TAF + TEMPO,5,0.5791
 DFW,TAF + TEMPO,6,0.5741
-DFW,Local XGBoost,1,0.7693
-DFW,Local XGBoost,2,0.6816
-DFW,Local XGBoost,3,0.6231
-DFW,Local XGBoost,4,0.5789
-DFW,Local XGBoost,5,0.5355
-DFW,Local XGBoost,6,0.522
-DFW,Hybrid XGBoost,1,0.7704
-DFW,Hybrid XGBoost,2,0.6947
-DFW,Hybrid XGBoost,3,0.6532
-DFW,Hybrid XGBoost,4,0.6172
-DFW,Hybrid XGBoost,5,0.5885
-DFW,Hybrid XGBoost,6,0.5764
-LAX,Persistence,1,0.7937
-LAX,Persistence,2,0.6812
-LAX,Persistence,3,0.6028
-LAX,Persistence,4,0.537
-LAX,Persistence,5,0.4812
-LAX,Persistence,6,0.4368
-LAX,TAF base,1,0.7182
-LAX,TAF base,2,0.6369
-LAX,TAF base,3,0.5884
-LAX,TAF base,4,0.5561
-LAX,TAF base,5,0.532
-LAX,TAF base,6,0.5152
-LAX,TAF + TEMPO,1,0.7165
-LAX,TAF + TEMPO,2,0.6356
-LAX,TAF + TEMPO,3,0.5878
-LAX,TAF + TEMPO,4,0.5554
-LAX,TAF + TEMPO,5,0.5322
-LAX,TAF + TEMPO,6,0.5154
-LAX,Local XGBoost,1,0.7898
-LAX,Local XGBoost,2,0.6841
-LAX,Local XGBoost,3,0.6202
-LAX,Local XGBoost,4,0.5687
-LAX,Local XGBoost,5,0.5333
-LAX,Local XGBoost,6,0.4941
-LAX,Hybrid XGBoost,1,0.7936
-LAX,Hybrid XGBoost,2,0.6885
-LAX,Hybrid XGBoost,3,0.6368
-LAX,Hybrid XGBoost,4,0.5925
-LAX,Hybrid XGBoost,5,0.5629
-LAX,Hybrid XGBoost,6,0.5327
+DFW,Local XGBoost,1,0.7675
+DFW,Local XGBoost,2,0.6751
+DFW,Local XGBoost,3,0.6225
+DFW,Local XGBoost,4,0.5859
+DFW,Local XGBoost,5,0.529
+DFW,Local XGBoost,6,0.5307
+DFW,Hybrid XGBoost,1,0.7663
+DFW,Hybrid XGBoost,2,0.6922
+DFW,Hybrid XGBoost,3,0.6466
+DFW,Hybrid XGBoost,4,0.617
+DFW,Hybrid XGBoost,5,0.5881
+DFW,Hybrid XGBoost,6,0.5738
+LAX,Persistence,1,0.7948
+LAX,Persistence,2,0.6828
+LAX,Persistence,3,0.6045
+LAX,Persistence,4,0.539
+LAX,Persistence,5,0.4833
+LAX,Persistence,6,0.4387
+LAX,TAF base,1,0.719
+LAX,TAF base,2,0.6377
+LAX,TAF base,3,0.5893
+LAX,TAF base,4,0.557
+LAX,TAF base,5,0.5329
+LAX,TAF base,6,0.5161
+LAX,TAF + TEMPO,1,0.7173
+LAX,TAF + TEMPO,2,0.6364
+LAX,TAF + TEMPO,3,0.5887
+LAX,TAF + TEMPO,4,0.5563
+LAX,TAF + TEMPO,5,0.5331
+LAX,TAF + TEMPO,6,0.5163
+LAX,Local XGBoost,1,0.7908
+LAX,Local XGBoost,2,0.6885
+LAX,Local XGBoost,3,0.6226
+LAX,Local XGBoost,4,0.5696
+LAX,Local XGBoost,5,0.5359
+LAX,Local XGBoost,6,0.499
+LAX,Hybrid XGBoost,1,0.7898
+LAX,Hybrid XGBoost,2,0.6864
+LAX,Hybrid XGBoost,3,0.6415
+LAX,Hybrid XGBoost,4,0.5988
+LAX,Hybrid XGBoost,5,0.5632
+LAX,Hybrid XGBoost,6,0.5401

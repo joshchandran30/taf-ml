@@ -1,7 +1,7 @@
 {
   "station": "ATL",
   "horizon": 1,
-  "threshold": 0.5,
+  "threshold": 0.55,
   "features": [
     "tmpf",
     "dwpf",
@@ -32,7 +32,7 @@
     "month",
     "now_ifr"
   ],
-  "val_f1_2024": 0.8286,
-  "test_f1_2025": 0.8157,
+  "val_f1_2024": 0.8315,
+  "test_f1_2025": 0.8131,
   "persistence_f1_2025": 0.8207
 }

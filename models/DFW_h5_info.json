@@ -1,7 +1,7 @@
 {
   "station": "DFW",
   "horizon": 5,
-  "threshold": 0.4,
+  "threshold": 0.35,
   "features": [
     "tmpf",
     "dwpf",
@@ -32,7 +32,7 @@
     "month",
     "now_ifr"
   ],
-  "val_f1_2024": 0.6084,
-  "test_f1_2025": 0.5092,
+  "val_f1_2024": 0.6079,
+  "test_f1_2025": 0.5087,
   "persistence_f1_2025": 0.4729
 }
